@@ -13,7 +13,7 @@ const yeniKartlar1 = () => {
 const yeniKartlar2 = () => {
     if(kart1==="kedi.png"){
         kart2 = "kopek.png";
-        
+        console.log(kart2);
     } else{
         let index2 = Math.floor(Math.random()*kartlar2.length);
         kart2 = kartlar2[index2];
