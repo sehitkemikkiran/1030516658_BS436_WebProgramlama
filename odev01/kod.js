@@ -4,6 +4,8 @@ var kart1;
 var kart2;
 var kart3;
 
+
+
 const yeniKartlar1 = () => {
     let index1 = Math.floor(Math.random()*kartlar1.length);
     kart1 = kartlar1[index1];
