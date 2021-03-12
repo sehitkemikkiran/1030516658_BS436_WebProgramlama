@@ -1,35 +1,65 @@
 const kartlar1 = ["kopek.png", "kopek.png", "kedi.png"];
-const kartlar2 = ["kopek.png", "kedi.png"];
-var kart1;
-var kart2;
-var kart3;
 
+let kart1;
+let kart2;
+let kart3;
+let html1;
+let html2;
+let html3;
+let tahminSayisi=2;
 
 
 const yeniKartlar1 = () => {
-    let index1 = Math.floor(Math.random()*kartlar1.length);
-    kart1 = kartlar1[index1];
-    console.log(kart1);
+    if (tahminSayisi!==0) {
+        let index1 = Math.floor(Math.random() * kartlar1.length);
+        kart1 = kartlar1[index1];
+        html1 = document.getElementById("img0").src = kart1;
+        if (kart1==="kedi.png"){
+            document.getElementById("alanId").innerHTML="Kazandınız!!!";
+        }
+        tahminSayisi-=1;
+    }else{
+        document.getElementById("alanId").innerHTML="Kaybettiniz!!!";
+    }
 }
 
 const yeniKartlar2 = () => {
-    if(kart1==="kedi.png"){
-        kart2 = "kopek.png";
-        console.log(kart2);
-    } else{
-        let index2 = Math.floor(Math.random()*kartlar2.length);
-        kart2 = kartlar2[index2];
-        console.log(kart2);
+    if (tahminSayisi !== 0) {
+        if (kart1 === "kedi.png") {
+            kart2 = "kopek.png";
+            html2 = document.getElementById("img1").src = kart2;
+
+        } else {
+            let index2 = Math.floor(Math.random() * kartlar1.length);
+            kart2 = kartlar1[index2];
+            html2 = document.getElementById("img1").src = kart2;
+        }
+        if (kart2==="kedi.png"){
+            document.getElementById("alanId").innerHTML="Kazandınız!!!";
+        }
+        tahminSayisi-=1;
+    }else{
+        document.getElementById("alanId").innerHTML="Kaybettiniz!!!";
     }
 }
 
 const yeniKartlar3 = () => {
-    if((kart1==="kedi.png" && kart2==="kopek.png") || (kart1==="kopek.png" && kart2==="kedi.png")){
-        kart3 = "kopek.png";
-        console.log(kart3);
-    } else {
-        kart3 = "kedi.png";
-        console.log(kart3);
+    if (tahminSayisi !== 0) {
+        if (kart1 === "kedi.png" || kart2 === "kedi.png") {
+            kart3 = "kopek.png";
+            html3 = document.getElementById("img2").src = kart3;
+
+        } else {
+            kart3 = "kedi.png";
+            html3 = document.getElementById("img2").src = kart3;
+
+        }
+        if (kart3==="kedi.png"){
+            document.getElementById("alanId").innerHTML="Kazandınız!!!";
+        }
+        tahminSayisi-=1;
+    }else{
+        document.getElementById("alanId").innerHTML="Kaybettiniz!!!";
     }
 }
 
