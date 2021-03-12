@@ -15,11 +15,11 @@ const yeniKartlar1 = () => {
         kart1 = kartlar1[index1];
         html1 = document.getElementById("img0").src = kart1;
         if (kart1==="kedi.png"){
-            document.getElementById("alanId").innerHTML="Kazandınız!!!";
+            document.getElementById("alanId").innerHTML="Kazandın!!! Tebrik ederiz :) Yeni bir oyun oynamak istersen <span class='link' onclick='document.location.reload(true);'>buraya</span> tıklayabilirsin.";
         }
         tahminSayisi-=1;
     }else{
-        document.getElementById("alanId").innerHTML="Kaybettiniz!!!";
+        document.getElementById("alanId").innerHTML="Kaybettin :( Yeni bir oyun oynamak istersen <span class='link' onclick='document.location.reload(true);'>buraya</span> tıklayabilirsin.";
     }
 }
 
@@ -35,11 +35,11 @@ const yeniKartlar2 = () => {
             html2 = document.getElementById("img1").src = kart2;
         }
         if (kart2==="kedi.png"){
-            document.getElementById("alanId").innerHTML="Kazandınız!!!";
+            document.getElementById("alanId").innerHTML="Kazandın!!! Tebrik ederiz :) Yeni bir oyun oynamak istersen <span class='link' onclick='document.location.reload(true);'>buraya</span> tıklayabilirsin.";
         }
         tahminSayisi-=1;
     }else{
-        document.getElementById("alanId").innerHTML="Kaybettiniz!!!";
+        document.getElementById("alanId").innerHTML="Kaybettin :( Yeni bir oyun oynamak istersen <span class='link' onclick='document.location.reload(true);'>buraya</span> tıklayabilirsin.";
     }
 }
 
@@ -55,11 +55,11 @@ const yeniKartlar3 = () => {
 
         }
         if (kart3==="kedi.png"){
-            document.getElementById("alanId").innerHTML="Kazandınız!!!";
+            document.getElementById("alanId").innerHTML="Kazandın!!! Tebrik ederiz :) Yeni bir oyun oynamak istersen <span class='link' onclick='document.location.reload(true);'>buraya</span> tıklayabilirsin.";
         }
         tahminSayisi-=1;
     }else{
-        document.getElementById("alanId").innerHTML="Kaybettiniz!!!";
+        document.getElementById("alanId").innerHTML="Kaybettin :( Yeni bir oyun oynamak istersen <span class='link' onclick='document.location.reload(true);'>buraya</span> tıklayabilirsin.";
     }
 }
 
